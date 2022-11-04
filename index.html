@@ -1,0 +1,204 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .contrainer {
+      width: 400px;
+      height: 650px;
+      margin: 100px;
+      margin-left: 35%;
+      border: 5px solid black;
+      background-color: rgb(53, 26, 26);
+    }
+
+    p {
+      font-size: 50px;
+      text-transform: uppercase;
+      text-align: center;
+      color: blanchedalmond;
+    }
+
+    #text {
+      width: 90%;
+      height: 10%;
+      margin-left: 5%;
+      margin-top: 0%;
+      margin-bottom: 7.5%;
+      font-size: xx-large;
+      background-color: skyblue;
+    }
+
+    .btn {
+      display: grid;
+      grid-template-columns: repeat(4, 85px);
+      grid-template-rows: repeat(4, 85px);
+      gap: 10px;
+      padding: 13px;
+    }
+
+    .button {
+      font-size: xx-large;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 4px #a8a8a8;
+    }
+
+    .button:active {
+      box-shadow: 0 2px rgb(230, 207, 207);
+      transform: translateY(2px);
+    }
+
+    .C {
+      background-color: tomato;
+    }
+
+    .egal {
+      background-color: yellowgreen;
+    }
+
+    .oo {
+      background-color: royalblue;
+    }
+  </style>
+
+  <body>
+    <div class="contrainer">
+      <div style="margin: 0%; padding: 0%">
+        <p>calculatrice</p>
+      </div>
+      <form name="calc">
+        <div>
+          <input type="text" name="tex" id="text" readonly />
+        </div>
+      </form>
+      <div class="btn">
+        <button
+          class="button 0"
+          onclick="document.calc.tex.value += '0'"
+          value="0"
+        >
+          0
+        </button>
+        <button
+          class="button C"
+          onclick="document.calc.tex.value = ''"
+          value="C"
+        >
+          C
+        </button>
+        <button
+          class="button egal"
+          onclick="document.calc.tex.value += ''"
+          value="="
+        >
+          =
+        </button>
+        <button
+          class="button oo"
+          onclick="document.calc.tex.value += '/'"
+          value="/"
+        >
+          /
+        </button>
+        <button
+          class="button"
+          onclick="document.calc.tex.value += '1'"
+          value="1"
+        >
+          1
+        </button>
+        <button
+          class="button"
+          onclick="document.calc.tex.value += '2'"
+          value="2"
+        >
+          2
+        </button>
+        <button
+          class="button"
+          onclick="document.calc.tex.value += '3'"
+          value="3"
+        >
+          3
+        </button>
+        <button
+          class="button oo"
+          onclick="document.calc.tex.value += '+'"
+          value="+"
+        >
+          +
+        </button>
+        <button
+          class="button 4"
+          onclick="document.calc.tex.value += '4'"
+          value="4"
+        >
+          4
+        </button>
+        <button
+          class="button 5"
+          onclick="document.calc.tex.value += '5'"
+          value="5"
+        >
+          5
+        </button>
+        <button
+          class="button 6"
+          onclick="document.calc.tex.value += '6'"
+          value="6"
+        >
+          6
+        </button>
+        <button
+          class="button oo"
+          onclick="document.calc.tex.value += '-'"
+          value="-"
+        >
+          -
+        </button>
+        <button
+          class="button 7"
+          onclick="document.calc.tex.value += '7'"
+          value="7"
+        >
+          7
+        </button>
+        <button
+          class="button 8"
+          onclick="document.calc.tex.value += '8'"
+          value="8"
+        >
+          8
+        </button>
+        <button
+          class="button 9"
+          onclick="document.calc.tex.value += '9'"
+          value="9"
+        >
+          9
+        </button>
+        <button
+          class="button oo"
+          onclick="document.calc.tex.value += '*'"
+          value="*"
+        >
+          *
+        </button>
+      </div>
+    </div>
+    <script>
+      const ecran = document.getElementById("text");
+      const egal = document.querySelector(".egal");
+      egal.addEventListener("click", function () {
+        ecran.value = eval(calc.tex.value);
+      });
+      window.addEventListener("error", (e) => {
+        alert(" ATTENTION!!  On a detecté une eurreur !! \n " + e.message);
+      });
+    </script>
+  </body>
+</html>
